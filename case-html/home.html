@@ -5,433 +5,463 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="vendors/magnefic-popup/magnific-popup.css">
-    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+    <style>
+        body {
+            background-image: url('anh/BG2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
 
-
+    </style>
 </head>
-<body>
-<style>
-    body {
-        background-image: url('anh/BG2.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
+<body style="background-image: url('/anh/BG2.jpg')">
 
-</style>
-<div>
-    <header class="header_area">
-        <div class="header-top">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <div id="logo">
-                        <a href="index.html"><img style="height: 80px"
-                                                  src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png"
-                                                  alt="" title=""/></a>
-                    </div>
-                    <div class="ml-auto d-none d-md-block d-md-flex">
-                        <div class="media header-top-info">
-                            <span class="header-top-info__icon">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-telephone-forward-fill" viewBox="0 0 16 16">
-                                      <path fill-rule="evenodd"
-                                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.761.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z"/>
-                                    </svg>
-                            </span>
-                            <div class="media-body">
-                                <p>Have any question?</p>
-                                <p>Free: <a href="tel:+12 365 5233">+12 365 5233</a></p>
-                            </div>
-                        </div>
-                        <div class="media header-top-info">
-                            <span class="header-top-info__icon">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
-                                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"/>
-                                  <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
-                               </svg>
-                            </span>
-                            <div class="media-body">
-                                <p>Have any question?</p>
-                                <p>Free: <a href="tel:+12 365 5233">+12 365 5233</a></p>
-                            </div>
-                        </div>
-                    </div>
+<div class="header container">
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="row">
+        <div class="col-lg-3">
+            <a href="">
+                <img src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png">
+            </a>
+        </div>
+        <div class="col-lg-3">
+            <div class="row">
+                <div class="col-lg-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                </div>
+                <div class="col-md-10">
+                    <p class="txt-lg">
+                        103 - 105 Vo Nguyen Giap Street, Ngu Hanh Son District, Danang City, Vietnam
+                    </p>
+                    <p>
+                        <span>7,0 km</span>
+                        from Danang Airport
+                    </p>
                 </div>
             </div>
         </div>
-
-
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-dark "
-                 style="background-color: #046056;position: sticky;">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item"><a class="nav-link" href="home.html" style="color: white">Home</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="customer.html" style="color: white">Customer</a>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true"
-                                   aria-expanded="false" style="color: white">Facility</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item active"><a class="nav-link" href="blog.html"
-                                                                   style="color: black">Blog</a></li>
-                                    <li class="nav-item active"><a class="nav-link" href="facility.html"
-                                                                   style="color: black">Facility</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="blog-single.html"
-                                                            style="color: black">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="contract.html"
-                                                    style="color: white">Contract</a></li>
-                        </ul>
-                    </div>
-
-                    <ul class="social-icons ml-auto">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li><a href="#"><i class="fas fa-rss"></i></a></li>
-                    </ul>
+        <div class="col-lg-3">
+            <div class="row">
+                <div class="col-lg-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="margin-top: 203px">
-                <img style="height: 250px" src="anh/Screenshot%202022-08-11%20094034.jpg" class="d-block w-100"
-                     alt="...">
+                <div class="col-md-10">
+                    <p>
+                        84-236-3847 333/888
+                    </p>
+                </div>
             </div>
-
+            <div class="row">
+                <div class="col-lg-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                </div>
+                <div class="col-md-10">
+                    <p>
+                        reservation@furamavietnam.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row">
+                <div class="col-lg-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd"
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </div>
+                <div class="col-md-10">
+                    <button class="btn btn-danger">Đăng Nhập</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                </div>
+                <div class="col-md-10">
+                    <p>
+                        0707498777
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                </div>
+                <div class="col-md-10">
+                    <p>
+                        hung@gmail.com
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="body_center_2 container">
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark "
+     style="background-color: #046056;position: sticky;top: 0;z-index: 1;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://localhost:8080/home">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="http://localhost:8080/employee">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="http://localhost:8080/service">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="http://localhost:8080/contract">Contract</a>
+                </li>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2 style="font-size: 22px;color: #cbbe73;line-height: 36px;text-align: left;font-family:Playfair Display;font-weight:700;font-style:normal">
-                    THIS WORLD CLASS RESORT, FURAMA DANANG, REPUTABLE FOR BEING A CULINARY RESORT IN VIETNAM
-                </h2>
-            </div>
-            <div class="col-lg-4" style="text-align: center">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0YT3hj2TLb8"
-                        title="Furama Resort Danang" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </iframe>
-            </div>
-            <div class="col-lg-4">
-                <p style="text-align: justify;">
-                    Overlooking the long stretch of wide white sand on Danang Beach, Furama Resort Danang is a gateway
-                    to three World Heritage Sites of Hoi An (20 minutes), My Son (90 minutes) and Hue (2 hours). The 198
-                    rooms and suites plus 70 two to four bedroom pool villas feature tasteful décor, designed with
-                    traditional Vietnamese style and a touch of French colonial architecture and guarantee the Vietnam’s
-                    the most prestigious resort -counting royalty, presidents, movie stars and international business
-                    leaders among its celebrity guests.
-                </p>
-            </div>
-        </div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="row ">
-            <div class="col-lg-12  " style="margin: 0 auto;background-color: #f3f3f3;height: 80px">
-                <div class="vc_empty_space" style="height: 23px"><span class="vc_empty_space_inner"></span></div>
-                <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal"
-                    class="vc_custom_heading">OFFERS & DEAL</h2>
-            </div>
-        </div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-
-        <div class="row ">
-            <div class="col-lg-12" style="margin: 0 auto">
-                <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal"
-                    class="vc_custom_heading">ROOMS & SUITES</h2>
-            </div>
-            <div class="col-lg-6" style="margin: 0 auto; text-align: center">
-                <p>
-                    All 198 rooms & suites have polished timber floors, natural fabrics, comfortable cane furniture,
-                    plantation style shutters and ceiling fans.
-                    room also has its own balcony or spacious terrace providing complete privacy and with a superb view
-                    of the ocean,
-                    the tropical garden or the freshwater swimming lagoon pool.
-                </p>
-            </div>
-        </div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="row">
-            <div class="col-lg-4">
-                <a href="facility.html">
-                    <div class="card" style="width: 100%">
-                        <img style="height: 220px"
-                             src="anh/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg"
-                             class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6>LAGOON SUPERIOR</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <a href="facility.html">
-                    <div class="card" style="width: 100%">
-                        <img style="height: 220px" src="anh/128146699-cr-800x450.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6>OCEAN DELUXE</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <a href="facility.html">
-                    <div class="card" style="width: 100%">
-                        <img style="height: 220px" src="anh/twins-bed-lagoon-superior-furama-da-nang-1-1024x551.jpg"
-                             class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6>OCEAN STUDIO SUITE</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        <div class="row ">
-            <div class="col-lg-12" style="margin: 0 auto">
-                <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal"
-                    class="vc_custom_heading">JOINING OUR CULINARY &amp; RECREATIONAL EXPERIENCE</h2>
-            </div>
-            <div class="col-lg-6" style="margin: 0 auto; text-align: center">
-                <p>
-                    The Furama Resort aims to make your stay in Vietnam a unique and unforgettable experience. Whether
-                    you prefer to be active or just to relax, we offer a wide range of activities and services to suit
-                    your needs.
-                </p>
-                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <img width="90%" height="90%" src="https://furamavietnam.com/wp-content/uploads/2018/07/CULIRARY.jpg">
-            </div>
-            <div class="col-lg-6">
-                <div class="col-lg-12">
-                    <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;font-family:Playfair Display;font-weight:700;font-style:normal"
-                        class="vc_custom_heading">CULINARY</h2>
-                </div>
-                <p>The resorts culinary experience features a mixture of the authentic and locally inspired Vietnamese,
-                    Asian, Italian and other European cuisines plus the best imported steaks. The resort presents guests
-                    with varied gastronomic venues – the hip and breezy bar overlooking the beach, the exclusive Lagoon
-                    pool surrounded by a tropical garden, the true Italian flare offered at the Don Ciprianis, the
-                    refined Asian touch at Cafe Indochine or the authentic central Vietnam cuisine at the Danaksara.</p>
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary" type="button" style="background-color:#046056 ">READ MORE</button>
-                </div>
-            </div>
-            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="col-lg-12">
-                    <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;font-family:Playfair Display;font-weight:700;font-style:normal"
-                        class="vc_custom_heading">MEETING & EVENT</h2>
-                </div>
-                <p>A well-appointed International Convention Palace with ballrooms can accommodate up to 1,000 people in
-                    style,
-                    with another ten function rooms for 50 to 300 people each. A variety of cultural-themed parties on
-                    the beach
-                    or around the lagoon, in the ballrooms or outside the resort, with the surprising arrivals of VIPs
-                    from
-                    Helicopter landing on the resort’s own Helipad…</p>
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary" type="button" style="background-color:#046056 ">READ MORE</button>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img width="90%" height="90%"
-                     src="https://furamavietnam.com/wp-content/uploads/2018/10/02.-ICP-ICP_Furama_Danang_-Ball-Room-4.jpg">
-            </div>
-
-            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <img width="90%" height="90%" src="https://furamavietnam.com/wp-content/uploads/2018/07/RECREATION.jpg">
-            </div>
-            <div class="col-lg-6">
-                <div class="col-lg-12">
-                    <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;font-family:Playfair Display;font-weight:700;font-style:normal"
-                        class="vc_custom_heading">RECREATION</h2>
-                </div>
-                <p>A full range of Water Sports will keep you busy. Stop by the Water Sport House where our
-                    experienced staff are waiting to assist or train you in the use of any of our equipment.</p>
-                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary" type="button" style="background-color:#046056 ">READ MORE</button>
-                </div>
-            </div>
-            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
-    <div class="footer container-fluid">
-        <!-- Footer -->
-        <footer class="text-center text-lg-start text-break " style="background-color:#1cad85b0">
-            <!-- Section: Social media -->
-            <section
-                    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-            >
-                <!-- Left -->
-                <div class="me-5 d-none d-lg-block">
-                    <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img style="height: 250px" src="anh/Screenshot%202022-08-11%20094034.jpg" class="d-block w-100"
+                 alt="...">
+        </div>
 
-                <!-- Right -->
-                <div>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <!-- Content -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>Company name
-                            </h6>
-                            <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                dolor sit amet, consectetur adipisicing elit.
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Products
-                            </h6>
-                            <p>
-                                <a href="#!" class="text-reset">Angular</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">React</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Vue</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Laravel</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Useful links
-                            </h6>
-                            <p>
-                                <a href="#!" class="text-reset">Pricing</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Settings</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Orders</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Help</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Contact
-                            </h6>
-                            <p><i class="fas fa-home me-3"></i> 295 Nguyen Tat Thanh</p>
-                            <p>
-                                <i class="fas fa-envelope me-3"></i>
-                                codegymDn@example.com
-                            </p>
-                            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-                        </div>
-                        <!-- Grid column -->
-                    </div>
-                    <!-- Grid row -->
-                </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2021 Copyright:
-                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
     </div>
+</div>
+<div class="body_center_2 container">
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <h2 style="font-size: 22px;color: #cbbe73;line-height: 36px;text-align: left;font-family:Playfair Display;font-weight:700;font-style:normal">
+                THIS WORLD CLASS RESORT, FURAMA DANANG, REPUTABLE FOR BEING A CULINARY RESORT IN VIETNAM
+            </h2>
+        </div>
+        <div class="col-lg-4" style="text-align: center">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0YT3hj2TLb8"
+                    title="Furama Resort Danang" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </iframe>
+        </div>
+        <div class="col-lg-4">
+            <p style="text-align: justify;">
+                Overlooking the long stretch of wide white sand on Danang Beach, Furama Resort Danang is a gateway
+                to three World Heritage Sites of Hoi An (20 minutes), My Son (90 minutes) and Hue (2 hours). The 198
+                rooms and suites plus 70 two to four bedroom pool villas feature tasteful décor, designed with
+                traditional Vietnamese style and a touch of French colonial architecture and guarantee the Vietnam’s
+                the most prestigious resort -counting royalty, presidents, movie stars and international business
+                leaders among its celebrity guests.
+            </p>
+        </div>
+    </div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="row ">
+        <div class="col-lg-12  " style="margin: 0 auto;background-color: #f3f3f3;height: 80px">
+            <div class="vc_empty_space" style="height: 23px"><span class="vc_empty_space_inner"></span></div>
+            <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal"
+                class="vc_custom_heading">OFFERS & DEAL</h2>
+        </div>
+    </div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+
+    <div class="row ">
+        <div class="col-lg-12" style="margin: 0 auto">
+            <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal"
+                class="vc_custom_heading">ROOMS & SUITES</h2>
+        </div>
+        <div class="col-lg-6" style="margin: 0 auto; text-align: center">
+            <p>
+                All 198 rooms & suites have polished timber floors, natural fabrics, comfortable cane furniture,
+                plantation style shutters and ceiling fans.
+                room also has its own balcony or spacious terrace providing complete privacy and with a superb view
+                of the ocean,
+                the tropical garden or the freshwater swimming lagoon pool.
+            </p>
+        </div>
+    </div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="facility.html">
+                <div class="card" style="width: 100%">
+                    <img style="height: 220px"
+                         src="anh/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg"
+                         class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>LAGOON SUPERIOR</h6>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <a href="facility.html">
+                <div class="card" style="width: 100%">
+                    <img style="height: 220px" src="anh/128146699-cr-800x450.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>OCEAN DELUXE</h6>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <a href="facility.html">
+                <div class="card" style="width: 100%">
+                    <img style="height: 220px" src="anh/twins-bed-lagoon-superior-furama-da-nang-1-1024x551.jpg"
+                         class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>OCEAN STUDIO SUITE</h6>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    <div class="row ">
+        <div class="col-lg-12" style="margin: 0 auto">
+            <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal"
+                class="vc_custom_heading">JOINING OUR CULINARY &amp; RECREATIONAL EXPERIENCE</h2>
+        </div>
+        <div class="col-lg-6" style="margin: 0 auto; text-align: center">
+            <p>
+                The Furama Resort aims to make your stay in Vietnam a unique and unforgettable experience. Whether
+                you prefer to be active or just to relax, we offer a wide range of activities and services to suit
+                your needs.
+            </p>
+            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <img width="90%" height="90%" src="https://furamavietnam.com/wp-content/uploads/2018/07/CULIRARY.jpg">
+        </div>
+        <div class="col-lg-6">
+            <div class="col-lg-12">
+                <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;font-family:Playfair Display;font-weight:700;font-style:normal"
+                    class="vc_custom_heading">CULINARY</h2>
+            </div>
+            <p>The resorts culinary experience features a mixture of the authentic and locally inspired Vietnamese,
+                Asian, Italian and other European cuisines plus the best imported steaks. The resort presents guests
+                with varied gastronomic venues – the hip and breezy bar overlooking the beach, the exclusive Lagoon
+                pool surrounded by a tropical garden, the true Italian flare offered at the Don Ciprianis, the
+                refined Asian touch at Cafe Indochine or the authentic central Vietnam cuisine at the Danaksara.</p>
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary" type="button" style="background-color:#046056 ">READ MORE</button>
+            </div>
+        </div>
+        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="col-lg-12">
+                <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;font-family:Playfair Display;font-weight:700;font-style:normal"
+                    class="vc_custom_heading">MEETING & EVENT</h2>
+            </div>
+            <p>A well-appointed International Convention Palace with ballrooms can accommodate up to 1,000 people in
+                style,
+                with another ten function rooms for 50 to 300 people each. A variety of cultural-themed parties on
+                the beach
+                or around the lagoon, in the ballrooms or outside the resort, with the surprising arrivals of VIPs
+                from
+                Helicopter landing on the resort’s own Helipad…</p>
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary" type="button" style="background-color:#046056 ">READ MORE</button>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img width="90%" height="90%"
+                 src="https://furamavietnam.com/wp-content/uploads/2018/10/02.-ICP-ICP_Furama_Danang_-Ball-Room-4.jpg">
+        </div>
+
+        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <img width="90%" height="90%" src="https://furamavietnam.com/wp-content/uploads/2018/07/RECREATION.jpg">
+        </div>
+        <div class="col-lg-6">
+            <div class="col-lg-12">
+                <h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;font-family:Playfair Display;font-weight:700;font-style:normal"
+                    class="vc_custom_heading">RECREATION</h2>
+            </div>
+            <p>A full range of Water Sports will keep you busy. Stop by the Water Sport House where our
+                experienced staff are waiting to assist or train you in the use of any of our equipment.</p>
+            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+            <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary" type="button" style="background-color:#046056 ">READ MORE</button>
+            </div>
+        </div>
+        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+
+    </div>
+</div>
+<div class="footer container-fluid">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-break " style="background-color:#1cad85b0">
+        <!-- Section: Social media -->
+        <section
+                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+        >
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Company name
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i> 295 Nguyen Tat Thanh</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            codegymDn@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</div>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
