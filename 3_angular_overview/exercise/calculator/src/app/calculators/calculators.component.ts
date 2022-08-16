@@ -6,8 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./calculators.component.css']
 })
 export class CalculatorsComponent implements OnInit {
-  number1 = 0;
-  number2 = 0;
+  number1: number;
+  number2: number;
   operator = '+';
   color = '';
 
