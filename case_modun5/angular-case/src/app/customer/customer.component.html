@@ -11,7 +11,7 @@
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div style="text-align: center">
-    <a href="create_customer.html"><button class="btn btn-outline-success" type="button">CREATE</button></a>
+    <a routerLink="/customer/create"><button class="btn btn-outline-success" type="button">CREATE</button></a>
   </div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <table class="table table-light">
@@ -27,60 +27,24 @@
       <th>Email</th>
       <th>Address</th>
       <th>Edit</th>
-      <th>Delete</th>
+      <th >Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
+    <tr *ngFor="let item of customers;index as i ">
+       <td>{{i+1}}</td>
+       <td>{{item.type.name}}</td>
+       <td>{{item.name}}</td>
+       <td>{{item.dayOfBirth}}</td>
+       <td>{{item.gender}}</td>
+       <td>{{item.idCard}}</td>
+       <td>{{item.phone}}</td>
+       <td>{{item.email}}</td>
+       <td>{{item.address}}</td>
       <td>
-        <a href="edit_customer.html"><button class="btn btn-outline-info" type="button">Edit</button></a>
-      </td>
-      <td>
-        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Delete
+        <button routerLink="/customer/edit" class="btn btn-outline-success">
+          Edit
         </button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>
-        <a href="edit_customer.html"><button class="btn btn-outline-info" type="button">Edit</button></a>
-      </td>
-      <td>
-        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Delete
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>
-        <a href="edit_customer.html"><button class="btn btn-outline-info" type="button">Edit</button></a>
       </td>
       <td>
         <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -95,15 +59,15 @@
     <div class="modal-dialog" style="margin-top: 110px;">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">DELETE</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          bạn có muốn xóa (name)
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button  type="button" class="btn btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn btn-outline-danger">Delete</button>
         </div>
       </div>
     </div>

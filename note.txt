@@ -3,3 +3,9 @@ npm init typescript-project
 tsc --watch
 
 node
+npm i -s bootstrap
+@import "~bootstrap/dist/css/bootstrap.css";
+
+ng g i name
+
+ng g s name

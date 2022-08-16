@@ -11,19 +11,19 @@ export class CalculatorsComponent implements OnInit {
   operator = '+';
   color = '';
 
-  calculate(number1: number, number2: number, operator: string) {
+  calculate(operator: string) {
     switch (operator) {
       case '+':
-        return number1 + number2;
+        return this.number1 + this.number2;
       case '-':
-        return number1 - number2;
+        return this.number1 - this.number2;
       case '*':
-        return number1 * number2;
+        return this.number1 * this.number2;
       case '/':
-        if (number2 === 0) {
+        if (this.number2 === 0) {
           return 'number2 != 0';
         }
-        return number1 / number2;
+        return this.number1 / this.number2;
     }
   }
 
