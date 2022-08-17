@@ -15,9 +15,10 @@
     </a>
   </div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-  <table class="table">
+  <table class="table table-light">
     <thead>
     <tr>
+      <th>STT</th>
       <th>Facility</th>
       <th>Customer</th>
       <th>Start date</th>
@@ -29,49 +30,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>Villa Beach Front</td>
-      <td>Nguyễn Thị Hào</td>
-      <td>2020-12-08</td>
-      <td>2020-12-08</td>
-      <td>200000</td>
-      <td>200000</td>
-      <td>
-        <button routerLink="/contract/edit" class="btn btn-outline-success">
-          Attach facility list
-        </button>
-      </td>
-      <td>
-        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Delete
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>Villa Beach Front</td>
-      <td>Nguyễn Thị Hà</td>
-      <td>2020-12-08</td>
-      <td>2020-12-08</td>
-      <td>200000</td>
-      <td>200000</td>
-      <td>
-        <button routerLink="/contract/edit" class="btn btn-outline-success">
-          Attach facility list
-        </button>
-      </td>
-      <td>
-        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Delete
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>Villa Beach Front</td>
-      <td>Nguyễn Thị Hải</td>
-      <td>2020-12-08</td>
-      <td>2020-12-08</td>
-      <td>200000</td>
-      <td>200000</td>
+    <tr *ngFor="let item of contracts;index as i ">
+      <td>{{i+1}}</td>
+      <td>{{item.facility.facilityName}}</td>
+      <td>{{item.customer.name}}</td>
+      <td>{{item.startDate}}</td>
+      <td>{{item.endDate}}</td>
+      <td>{{item.deposit}}</td>
+      <td>{{item.totalMoney}}</td>
       <td>
         <button routerLink="/contract/edit" class="btn btn-outline-success">
           Attach facility list

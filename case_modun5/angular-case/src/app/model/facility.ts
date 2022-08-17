@@ -1,5 +1,5 @@
 export interface Facility {
-  Id?: number;
+  id?: number;
   facilityName?: string;
   are?: number;
   cost?: number;
@@ -11,4 +11,5 @@ export interface Facility {
   poolArea?: number;
   numberOffloors?: number;
   facalityFree?: string;
+  facalityImg?: string;
 }

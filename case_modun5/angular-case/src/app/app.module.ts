@@ -15,6 +15,7 @@ import { ContractCreateComponent } from './contract/contract-create/contract-cre
 import { ContractEditComponent } from './contract/contract-edit/contract-edit.component';
 import { FacilityCreateComponent } from './facility/facility-create/facility-create.component';
 import { FacilityEditComponent } from './facility/facility-edit/facility-edit.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -33,10 +34,12 @@ import { FacilityEditComponent } from './facility/facility-edit/facility-edit.co
     FacilityCreateComponent,
     FacilityEditComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
