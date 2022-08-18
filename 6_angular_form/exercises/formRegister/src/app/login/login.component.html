@@ -1,0 +1,16 @@
+<h1 style="text-align: center">Register</h1>
+<form class="container col-4" style="margin-bottom: 40px" [formGroup]="Form" (ngSubmit)="submit()" novalidate>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+    <span style="color: red" *ngIf="Form.controls.email.hasError('required') && Form.controls.email.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.email.hasError('email') && Form.controls.email.touched">=> Email wrong format!</span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+    <span style="color: red" *ngIf="Form.controls.password.hasError('required') && Form.controls.password.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.password.hasError('minlength') && Form.controls.password.touched">=> Password > 6!</span>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

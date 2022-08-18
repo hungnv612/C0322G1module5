@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Contract} from '../model/contract';
+import {Customer} from '../model/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -38,5 +39,9 @@ export class ContractService {
   constructor() { }
   getAll() {
     return this.contracts;
+  }
+  saveContract(contract: Contract) {
+    contract.idContarcct = this.contracts.length + 1;
+    this.contracts.push(contract);
   }
 }

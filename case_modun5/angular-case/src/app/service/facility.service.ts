@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Facility} from '../model/facility';
+import {Customer} from '../model/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class FacilityService {
       cost: 20000000,
       maxPeople: 2,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 1, name: 'Villa'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -28,7 +29,7 @@ export class FacilityService {
       cost: 12000000,
       maxPeople: 4,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 2, name: 'House'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -43,7 +44,7 @@ export class FacilityService {
       cost: 14000000,
       maxPeople: 8,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 3, name: 'Room'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -58,7 +59,7 @@ export class FacilityService {
       cost: 22000000,
       maxPeople: 7,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 1, name: 'Villa'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -73,7 +74,7 @@ export class FacilityService {
       cost: 32000000,
       maxPeople: 5,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 3, name: 'Room'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -88,7 +89,7 @@ export class FacilityService {
       cost: 42000000,
       maxPeople: 13,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 1, name: 'Villa'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -103,7 +104,7 @@ export class FacilityService {
       cost: 12000000,
       maxPeople: 2,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 3, name: 'Room'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -118,7 +119,7 @@ export class FacilityService {
       cost: 34000000,
       maxPeople: 4,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 3, name: 'Room'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -133,7 +134,7 @@ export class FacilityService {
       cost: 23000000,
       maxPeople: 14,
       rentTypeId: 2,
-      facilityTypeId: 3,
+      facilityTypeId: {id: 1, name: 'Villa'},
       standardRoom: 'vip',
       descriptionOtherConvenience: 'Có hồ bơi',
       poolArea: 500,
@@ -150,5 +151,9 @@ export class FacilityService {
 
   findById(id: number) {
     return this.facilities.find(category => category.id === id);
+  }
+  saveFacility(facility: Facility) {
+    facility.id = this.facilities.length + 1;
+    this.facilities.push(facility);
   }
 }

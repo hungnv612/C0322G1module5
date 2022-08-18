@@ -26,4 +26,7 @@ export class CustomerTypeService {
       name: 'Platinum',
     }
   ];
+  getAll() {
+    return this.customerTypes;
+  }
 }

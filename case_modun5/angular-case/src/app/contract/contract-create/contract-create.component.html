@@ -11,62 +11,44 @@
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-  <form action="/facility/edit" method="post">
+  <form [formGroup]="contractForm" (ngSubmit)="submit()">
     <div style=" display: flex;justify-content: center;" class="row">
       <div class="col-8">
         <div>
-          <div class="row">
             <div class="col-6">Facility</div>
-          </div>
-          <div class="row">
             <div class="col-12">
-              <select>
-                <option value="1">Villa</option>
-                <option value="2">House</option>
-                <option value="3">Room</option>
+              <select formControlName="facility" class="form-control">
+                <option *ngFor="let item of facility" [ngValue]="item">{{item.facilityName}}</option>
+              </select>
+          </div>
+            <div class="col-6">Customer</div>
+            <div class="col-12 ">
+              <select formControlName="customer" class="form-control">
+                <option *ngFor="let item of customer" [ngValue]="item">{{item.name}}</option>
               </select>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6">Customer</div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <input class="form-control" type="text">
-            </div>
-          </div>
-          <div class="row">
             <div class="col-6">Start date</div>
-          </div>
-          <div class="row">
-            <div class="col-12"><input type="date" class="form-control"></div>
-          </div>
-          <div class="row">
+            <div class="col-12">
+              <input type="date" class="form-control" formControlName="startDate">
+            </div>
             <div class="col-6">End date</div>
-          </div>
-          <div class="row">
-            <div class="col-12"><input class="form-control" type="date"></div>
-          </div>
-          <div class="row">
+            <div class="col-12">
+              <input class="form-control" type="date" formControlName="endDate">
+            </div>
             <div class="col-6">Deposit</div>
-          </div>
-          <div class="row">
-            <div class="col-12"><input class="form-control" type="text"></div>
-          </div>
-          <div class="row">
+            <div class="col-12">
+              <input class="form-control" type="number" formControlName="deposit">
+            </div>
             <div class="col-6">Total money</div>
-          </div>
-          <div class="row">
-            <div class="col-12"><input class="form-control" type="number"></div>
-          </div>
+            <div class="col-12">
+              <input class="form-control" type="number" formControlName="totalMoney">
+            </div>
           <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span>
           </div>
-          <div class="row">
             <div class="col-6">
               <button class="btn btn-outline-success">Create</button>
               <button routerLink="/contract"  class="btn btn-outline-danger">Exit</button>
             </div>
-          </div>
         </div>
       </div>
     </div>

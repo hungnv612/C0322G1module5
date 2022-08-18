@@ -1,0 +1,55 @@
+<h1 style="text-align: center">Register</h1>
+<form class="container col-4" style="margin-bottom: 40px" [formGroup]="Form" (ngSubmit)="submit()" novalidate>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+    <span style="color: red" *ngIf="Form.controls.email.hasError('required') && Form.controls.email.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.email.hasError('email') && Form.controls.email.touched">=> Email wrong format!</span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+    <span style="color: red" *ngIf="Form.controls.password.hasError('required') && Form.controls.password.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.password.hasError('minlength') && Form.controls.password.touched">=> Password > 6!</span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" formControlName="confirmPassword">
+    <span style="color: red" *ngIf="Form.controls.confirmPassword.hasError('required') && Form.controls.confirmPassword.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.confirmPassword.hasError('minlength') && Form.controls.confirmPassword.touched">=> Password > 6!</span>
+    <span style="color: red" *ngIf="Form.hasError('err') && Form.controls.confirmPassword.touched">password does not match</span>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Country</label>
+    <select class="form-select" aria-label="Default select example">
+      <option value="1">vn</option>
+      <option value="2">sin</option>
+      <option value="3">my</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputAge" class="form-label">Age</label>
+    <input type="number" class="form-control" id="exampleInputAge" formControlName="age">
+    <span style="color: red" *ngIf="Form.controls.age.hasError('required') && Form.controls.age.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.age.hasError('min') && Form.controls.age.touched">=> Age > 18!</span>
+    <span style="color: red" *ngIf="Form.controls.age.hasError('max') && Form.controls.age.touched">=> Age < 99!</span>
+  </div>
+  <label class="form-label">Gender</label>
+  <div class="mb-3 form-check">
+    <div class="col-2"><input type="radio" formControlName="gender" value="male" class="form-check-inline">
+      Male
+    </div>
+    <div class="col-2"><input type="radio" formControlName="gender" value="female" class="form-check-inline">
+      Female
+    </div>
+    <span *ngIf="Form.controls.gender.hasError('required') && Form.controls.gender.touched">=> Please choose!</span>
+    <div class="col-2"></div>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="text" class="form-control" id="phone" formControlName="phone">
+    <span style="color: red" *ngIf="Form.controls.phone.hasError('required') && Form.controls.phone.touched">=> Please input !</span>
+    <span style="color: red" *ngIf="Form.controls.phone.hasError('pattern') && Form.controls.phone.touched">=> Phone wrong format!</span>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

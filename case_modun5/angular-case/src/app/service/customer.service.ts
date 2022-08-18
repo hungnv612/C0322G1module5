@@ -55,4 +55,8 @@ export class CustomerService {
   getAll() {
     return this.customers;
   }
+  saveCustomer(customer: Customer) {
+    customer.id = this.customers.length + 1;
+    this.customers.push(customer);
+  }
 }

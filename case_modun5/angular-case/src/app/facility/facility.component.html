@@ -76,68 +76,72 @@
   </div>
   <!--modal detail-->
 
-    <div class="modal fade" id="a" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabelDetail">Detail</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="modal fade" id="a" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabelDetail">Detail</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6 ">ID</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.id}}</label>
+            </div>
+            <div class="col-6">Name</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.facilityName}}</label>
+            </div>
+            <div class="col-6">ARE</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.are}}</label>
+            </div>
+            <div class="col-6">Cost</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.cost}}</label>
+            </div>
+            <div class="col-6">Max People</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.maxPeople}}</label>
+            </div>
+            <div class="col-6">Facility Type</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.facilityTypeId.name}}</label>
+            </div>
+            <div class="col-6">RentType</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.rentTypeId}}</label>
+            </div>
+            <div class="col-6">Standard Room</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.standardRoom}}</label>
+            </div>
+            <div class="col-6">Description</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.descriptionOtherConvenience}}</label>
+            </div>
+            <div class="col-6">Pool Area</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.poolArea}}</label>
+            </div>
+            <div class="col-6">Number Off loors</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.numberOffloors}}</label>
+            </div>
+            <div class="col-6">Free</div>
+            <div class="col-12">
+              <label class="form-control">{{faclityObjModal.facalityFree}}</label>
+            </div>
           </div>
-          <div class="modal-body">
-              <div class="row" >
-                <div class="col-6 " >ID</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.id}}</label>
-                </div>
-                <div class="col-6">Name</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.facilityName}}</label>
-                </div>
-                <div class="col-6">ARE</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.are}}</label>
-                </div>
-                <div class="col-6">Cost</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.cost}}</label>
-                </div>
-                <div class="col-6">Max People</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.maxPeople}}</label>
-                </div>
-                <div class="col-6">RentType</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.rentTypeId}}</label>
-                </div>
-                <div class="col-6">Standard Room</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.standardRoom}}</label>
-                </div>
-                <div class="col-6">Description</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.descriptionOtherConvenience}}</label>
-                </div>
-                <div class="col-6">Pool Area</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.poolArea}}</label>
-                </div>
-                <div class="col-6">Number Off loors</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.numberOffloors}}</label>
-                </div>
-                <div class="col-6">Free</div>
-                <div class="col-12">
-                  <label class="form-control">{{faclityObjModal.facalityFree}}</label>
-                </div>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn btn-outline-danger " data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn btn-outline-info ">Rent</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn btn-outline-danger " data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn btn-outline-info ">Rent</button>
         </div>
       </div>
     </div>
+  </div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 </div>
