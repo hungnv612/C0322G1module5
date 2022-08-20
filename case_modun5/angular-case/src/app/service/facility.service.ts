@@ -6,6 +6,7 @@ import {Customer} from '../model/customer';
   providedIn: 'root'
 })
 export class FacilityService {
+  idMax = 0;
   facilities: Facility[] = [
     {
       id: 1,
@@ -153,7 +154,12 @@ export class FacilityService {
     return this.facilities.find(category => category.id === id);
   }
   saveFacility(facility: Facility) {
-    facility.id = this.facilities.length + 1;
+    for (let i = 0; i < this.facilities.length ; i++) {
+      if (this.facilities[i].id > this.idMax) {
+        this.idMax = this.facilities[i].id;
+      }
+    }
+    facility.id = this.idMax + 1;
     this.facilities.push(facility);
   }
 }

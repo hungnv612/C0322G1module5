@@ -16,10 +16,9 @@ import {ContractEditComponent} from './contract/contract-edit/contract-edit.comp
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-
   { path: 'customer', component: CustomerComponent},
   { path: 'customer/create', component: CreateComponent},
-  { path: 'customer/edit', component: EditComponent},
+  { path: 'customer/edit/:id', component: EditComponent},
   { path: 'facility', component: FacilityComponent},
   { path: 'facility/create', component: FacilityCreateComponent},
   { path: 'facility/edit', component: FacilityEditComponent},

@@ -42,12 +42,12 @@
        <td>{{item.email}}</td>
        <td>{{item.address}}</td>
       <td>
-        <button routerLink="/customer/edit" class="btn btn-outline-success">
+        <a [routerLink]="['/customer/edit',item.id]" class="btn btn-outline-success">
           Edit
-        </button>
+        </a>
       </td>
       <td>
-        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button (click)="openDelete(item.id,item.name)" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Delete
         </button>
       </td>
@@ -63,11 +63,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          bạn có muốn xóa (name)
+          bạn có muốn xóa {{name}} {{id}}
         </div>
         <div class="modal-footer">
           <button  type="button" class="btn btn btn-outline-info" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn btn-outline-danger">Delete</button>
+          <button type="button" class="btn btn btn-outline-danger" data-bs-dismiss="modal" (click)="delete(id)">Delete</button>
         </div>
       </div>
     </div>

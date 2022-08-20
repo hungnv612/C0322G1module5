@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Customer} from '../model/customer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
+  idMax = 0;
   customers: Customer[] = [
     {
       id: 1,
@@ -51,12 +52,40 @@ export class CustomerService {
       address: '592 hai thành',
     }
   ];
-  constructor() { }
+
+  constructor() {
+  }
+
   getAll() {
     return this.customers;
   }
+
   saveCustomer(customer: Customer) {
-    customer.id = this.customers.length + 1;
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.customers.length ; i++) {
+      if (this.customers[i].id > this.idMax) {
+        this.idMax = this.customers[i].id;
+      }
+    }
+    customer.id = this.idMax + 1;
     this.customers.push(customer);
+  }
+
+  deleteCustomer(id: number) {
+    this.customers = this.customers.filter(customer => {
+      return customer.id !== id;
+    });
+  }
+
+  findById(id: number) {
+    return this.customers.find(category => category.id === id);
+  }
+
+  editCustomer(id: number, customer: any) {
+    for (let i = 0; i < this.customers.length; i++) {
+      if (this.customers[i].id === id) {
+        this.customers[i] = customer;
+      }
+    }
   }
 }
