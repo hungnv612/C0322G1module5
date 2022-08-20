@@ -26,7 +26,7 @@ export class DictionaryDetailComponent implements OnInit {
     })
   }
 
-  back() {
-    this.route.navigateByUrl('');
+  backPage() {
+    this.route.navigateByUrl('page');
   }
 }
