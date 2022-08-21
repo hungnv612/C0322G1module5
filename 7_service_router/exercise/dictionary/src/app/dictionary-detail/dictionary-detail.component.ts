@@ -16,13 +16,10 @@ export class DictionaryDetailComponent implements OnInit {
               private route: Router) {
   }
 
-  ngOnInit()
-    :
-    void {
+  ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const ing = paramMap.get('ing');
       this.detail = this.dictionaryService.findBy(ing);
-
     })
   }
 
