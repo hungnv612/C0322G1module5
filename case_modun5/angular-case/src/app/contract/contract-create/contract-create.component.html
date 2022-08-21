@@ -43,6 +43,7 @@
             <div class="col-12">
               <input class="form-control" type="number" formControlName="totalMoney">
             </div>
+          <span style="color: red" *ngIf="contractForm.controls.totalMoney.hasError('pattern') && contractForm.controls.totalMoney.touched">=> totalMoney wrong format!</span>
           <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span>
           </div>
             <div class="col-6">

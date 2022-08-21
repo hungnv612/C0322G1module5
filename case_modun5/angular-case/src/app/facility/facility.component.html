@@ -35,7 +35,7 @@
 
 
             <div class="col-lg-4">
-              <button routerLink="/facility/edit" style="width: 100%" type="button" class="btn btn-outline-primary">
+              <button [routerLink]="['/facility/edit',item.id]" style="width: 100%" type="button" class="btn btn-outline-primary">
                 Edit
               </button>
             </div>
@@ -46,7 +46,7 @@
               </button>
             </div>
             <div class="col-lg-4">
-              <button style="width: 100%" type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+              <button (click)="openDelete(item.id,item.facilityName)" style="width: 100%" type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
                       data-bs-target="#exampleModal">
                 Delete
               </button>
@@ -65,11 +65,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          bạn có muốn xóa (name)
+          bạn có muốn xóa {{name}}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn btn-outline-info" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn btn-outline-danger">Delete</button>
+          <button type="button" class="btn btn btn-outline-danger" data-bs-dismiss="modal" (click)="delete(id)">Delete</button>
         </div>
       </div>
     </div>

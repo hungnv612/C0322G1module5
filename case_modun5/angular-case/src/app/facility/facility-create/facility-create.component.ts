@@ -12,25 +12,31 @@ import {Router} from '@angular/router';
 })
 export class FacilityCreateComponent implements OnInit {
   facilityTypes: FacilityType[] = this.type.getAll();
+
   constructor(private type: FacilityTypeService,
               private facilityService: FacilityService,
-              private router: Router) { }
+              private router: Router) {
+  }
+
   facilityForm: FormGroup = new FormGroup({
-    facilityName: new FormControl(),
-    are: new FormControl(),
-    cost: new FormControl(),
-    maxPeople: new FormControl(),
-    rentTypeId: new FormControl(),
-    facilityTypeId: new FormControl(),
-    standardRoom: new FormControl(),
-    descriptionOtherConvenience: new FormControl(),
-    poolArea: new FormControl(),
-    numberOffloors: new FormControl(),
-    facalityFree: new FormControl(),
-    facalityImg: new FormControl(),
+    facilityName: new FormControl('', [Validators.required, Validators.pattern('^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$')]),
+    are: new FormControl('', [Validators.required]),
+    cost: new FormControl('', [Validators.required]),
+    maxPeople: new FormControl('', [Validators.required, Validators.pattern('^[1-9]+$')]),
+    rentTypeId: new FormControl('', [Validators.required]),
+    facilityTypeId: new FormControl('', [Validators.required]),
+    standardRoom: new FormControl('', [Validators.required]),
+    descriptionOtherConvenience: new FormControl('', [Validators.required]),
+    poolArea: new FormControl('', [Validators.required, Validators.pattern('^[1-9]+$')]),
+    numberOffloors: new FormControl('', [Validators.required, Validators.pattern('^[1-9]+$')]),
+    facalityFree: new FormControl('', [Validators.required]),
+    facalityImg: new FormControl('', [Validators.required]),
   });
+  typeFacility = '';
+
   ngOnInit(): void {
   }
+
   submit() {
     const facility = this.facilityForm.value;
     console.log(facility);
@@ -38,5 +44,7 @@ export class FacilityCreateComponent implements OnInit {
     this.facilityForm.reset();
     this.router.navigate(['/facility']);
   }
-
+  selectType(value) {
+    this.facilityTypes = value;
+  }
 }

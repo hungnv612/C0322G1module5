@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ContractService} from '../../service/contract.service';
 import {Router} from '@angular/router';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Facility} from '../../model/facility';
 import {Customer} from '../../model/customer';
 import {CustomerService} from '../../service/customer.service';
@@ -25,7 +25,7 @@ export class ContractCreateComponent implements OnInit {
     startDate: new FormControl(),
     endDate: new FormControl(),
     deposit: new FormControl(),
-    totalMoney: new FormControl(),
+    totalMoney: new FormControl('', [Validators.pattern('^[1-9]+$')]),
   });
   ngOnInit(): void {
   }

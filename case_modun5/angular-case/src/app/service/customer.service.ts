@@ -77,7 +77,7 @@ export class CustomerService {
     });
   }
 
-  findById(id: number) {
+  findByIdCustomer(id: number) {
     return this.customers.find(category => category.id === id);
   }
 

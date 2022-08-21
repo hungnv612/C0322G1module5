@@ -154,6 +154,7 @@ export class FacilityService {
     return this.facilities.find(category => category.id === id);
   }
   saveFacility(facility: Facility) {
+    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < this.facilities.length ; i++) {
       if (this.facilities[i].id > this.idMax) {
         this.idMax = this.facilities[i].id;
@@ -161,5 +162,22 @@ export class FacilityService {
     }
     facility.id = this.idMax + 1;
     this.facilities.push(facility);
+  }
+  deleteFacility(id: number) {
+    this.facilities = this.facilities.filter(facility => {
+      return facility.id !== id;
+    });
+  }
+
+  findByIdFacility(id: number) {
+    return this.facilities.find(category => category.id === id);
+  }
+
+  editFacility(id: number, facility: any) {
+    for (let i = 0; i < this.facilities.length; i++) {
+      if (this.facilities[i].id === id) {
+        this.facilities[i] = facility;
+      }
+    }
   }
 }

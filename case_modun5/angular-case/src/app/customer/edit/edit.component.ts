@@ -46,6 +46,6 @@ export class EditComponent implements OnInit {
   }
 
   getCustomer(id: number) {
-    return this.customerService.findById(id);
+    return this.customerService.findByIdCustomer(id);
   }
 }
