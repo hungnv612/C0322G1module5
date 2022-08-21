@@ -1,17 +1,18 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {DictionaryPageComponent} from "./dictionary-page/dictionary-page.component";
-import {DictionaryDetailComponent} from "./dictionary-detail/dictionary-detail.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {PageComponent} from './page/page.component';
+import {DetailComponent} from './detail/detail.component';
 
 
 const routes: Routes = [
-  {path: 'page', component: DictionaryPageComponent},
-  {path: 'detail/:word', component: DictionaryDetailComponent}
+
+  {path: '', component: PageComponent},
+  {path: 'dictionaryDetail/:word', component: DetailComponent}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }

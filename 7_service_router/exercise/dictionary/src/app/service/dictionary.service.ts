@@ -1,23 +1,29 @@
 import {Injectable} from '@angular/core';
-import {Iing} from "../model/dictionary";
+import {Word} from '../word';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DictionaryService {
-  list: Iing [] = [
-    {ing: 'Hello', vn: 'Xin chao'},
-    {ing: 'Bye', vn: 'Tam biet'},
-    {ing: 'Book', vn: 'Sach'}];
+  list: Word[] = [{
+    ing: 'Gold',
+    vn: 'vàng'
+  },
+    {
+      ing: 'Diamond',
+      vn: 'kim cương'
+    }
+  ];
 
   constructor() {
   }
 
-  findAll() {
-    return this.list;
+  findById(ing: string): Word {
+
+    return this.list.find(wordObj => wordObj.ing === ing);
   }
 
-  findBy(ing) {
-    return this.list.find(ingDetail => ingDetail.ing === ing);
+  findAll(): Word[] {
+    return this.list
   }
 }

@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
-import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
+import { DetailComponent } from './detail/detail.component';
+import { PageComponent } from './page/page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DictionaryPageComponent,
-    DictionaryDetailComponent
+    DetailComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
