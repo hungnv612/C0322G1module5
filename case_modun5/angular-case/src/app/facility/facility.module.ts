@@ -2,13 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FacilityRoutingModule } from './facility-routing.module';
+import {FacilityComponent} from './facility.component';
+import {FacilityCreateComponent} from './facility-create/facility-create.component';
+import {FacilityEditComponent} from './facility-edit/facility-edit.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [FacilityComponent,
+    FacilityCreateComponent,
+    FacilityEditComponent
+  ],
   imports: [
     CommonModule,
-    FacilityRoutingModule
+    FacilityRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class FacilityModule { }

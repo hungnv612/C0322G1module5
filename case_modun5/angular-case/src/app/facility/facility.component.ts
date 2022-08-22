@@ -1,9 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Facility} from '../model/facility';
-import {CustomerService} from '../service/customer.service';
 import {FacilityService} from '../service/facility.service';
-import {ActivatedRoute, ParamMap} from '@angular/router';
-import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-facility',
