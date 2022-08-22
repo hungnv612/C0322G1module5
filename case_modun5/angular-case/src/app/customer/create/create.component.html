@@ -23,7 +23,7 @@
         <div class="col-12">
           <select class="form-select" formControlName="type">
             <option value="" selected>Select</option>
-            <option *ngFor="let item of customerType" [ngValue]="item">{{item.name}}</option>
+            <option selected *ngFor="let item of customerType" [ngValue]="item">{{item.name}}</option>
             <span style="color: red" *ngIf="customerForm.controls.type.hasError('required') && customerForm.controls.type.touched">=> Please input !</span>
           </select>
         </div>

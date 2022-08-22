@@ -1,0 +1,34 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "hung"
+    },
+    {
+      "id": 2,
+      "name": "hung 2"
+    },
+    {
+      "id": 3,
+      "name": "long 2"
+    },
+    {
+      "id": 4,
+      "name": "hai"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "IPhone 11",
+      "price": 2400000,
+      "description": "New"
+    },
+    {
+      "id": 2,
+      "name": "IPhone 14",
+      "price": 1560000,
+      "description": "Like new"
+    }
+  ]
+}

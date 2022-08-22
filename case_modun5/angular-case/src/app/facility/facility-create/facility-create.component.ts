@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 })
 export class FacilityCreateComponent implements OnInit {
   facilityTypes: FacilityType[] = this.type.getAll();
-
+  temp: string;
   constructor(private type: FacilityTypeService,
               private facilityService: FacilityService,
               private router: Router) {
@@ -32,7 +32,6 @@ export class FacilityCreateComponent implements OnInit {
     facalityFree: new FormControl('', [Validators.required]),
     facalityImg: new FormControl('', [Validators.required]),
   });
-  typeFacility = '';
 
   ngOnInit(): void {
   }
@@ -44,7 +43,7 @@ export class FacilityCreateComponent implements OnInit {
     this.facilityForm.reset();
     this.router.navigate(['/facility']);
   }
-  selectType(value) {
-    this.facilityTypes = value;
+  changeFacility(value: any) {
+    this.temp = value;
   }
 }

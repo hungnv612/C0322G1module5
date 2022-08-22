@@ -35,7 +35,8 @@
 
 
             <div class="col-lg-4">
-              <button [routerLink]="['/facility/edit',item.id]" style="width: 100%" type="button" class="btn btn-outline-primary">
+              <button [routerLink]="['/facility/edit',item.id]" style="width: 100%" type="button"
+                      class="btn btn-outline-primary">
                 Edit
               </button>
             </div>
@@ -46,7 +47,8 @@
               </button>
             </div>
             <div class="col-lg-4">
-              <button (click)="openDelete(item.id,item.facilityName)" style="width: 100%" type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+              <button (click)="openDelete(item.id,item.facilityName)" style="width: 100%" type="button"
+                      class="btn btn-outline-danger" data-bs-toggle="modal"
                       data-bs-target="#exampleModal">
                 Delete
               </button>
@@ -69,7 +71,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn btn-outline-info" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn btn-outline-danger" data-bs-dismiss="modal" (click)="delete(id)">Delete</button>
+          <button type="button" class="btn btn btn-outline-danger" data-bs-dismiss="modal" (click)="delete(id)">Delete
+          </button>
         </div>
       </div>
     </div>
@@ -79,11 +82,11 @@
   <div class="modal fade" id="a" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header row"  style="display: flex;justify-content: space-evenly;">
-          <div class="col-8" >
-          <img style="height: 130px;width: 100%" src="{{faclityObjModal.facalityImg}}"
-               class="card-img-top"
-               alt="..." style="text-align: center">
+        <div class="modal-header row" style="display: flex;justify-content: space-evenly;">
+          <div class="col-8">
+            <img style="height: 130px;width: 100%" src="{{faclityObjModal.facalityImg}}"
+                 class="card-img-top"
+                 alt="..." style="text-align: center">
           </div>
         </div>
         <div class="modal-body">
@@ -94,8 +97,8 @@
             </div>
             <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
             <div class="col-4">Name</div>
-            <div class="col-8" *ngIf="faclityObjModal.facilityName!==null" type="hidden"  >
-              <label class="form-control" >{{faclityObjModal.facilityName}}</label>
+            <div class="col-8">
+              <label class="form-control">{{faclityObjModal.facilityName}}</label>
             </div>
             <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
             <div class="col-4">ARE</div>
@@ -143,7 +146,7 @@
               <label class="form-control">{{faclityObjModal.numberOffloors}}</label>
             </div>
             <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
-            <div class="col-4">Free</div>
+            <div class="col-4"> Free</div>
             <div class="col-8">
               <label class="form-control">{{faclityObjModal.facalityFree}}</label>
             </div>

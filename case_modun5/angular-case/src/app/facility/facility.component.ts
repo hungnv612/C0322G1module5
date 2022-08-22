@@ -21,6 +21,7 @@ export class FacilityComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAll();
+    this.displayModalDetail(1);
   }
 
   getAll() {
@@ -29,6 +30,7 @@ export class FacilityComponent implements OnInit {
 
   displayModalDetail(id: number): void {
     this.faclityObjModal = this.facilityService.findById(id);
+    console.log(this.faclityObjModal);
   }
   openDelete(id: number, name: string) {
     this.id = id;
