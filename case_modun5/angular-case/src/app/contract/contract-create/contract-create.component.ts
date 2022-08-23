@@ -13,7 +13,7 @@ import {FacilityService} from '../../service/facility.service';
   styleUrls: ['./contract-create.component.css']
 })
 export class ContractCreateComponent implements OnInit {
-  customer: Customer[] = this.customers.getAll();
+  // customer: Customer[] = this.customers.getAll();
   facility: Facility[] = this.facilitys.getAll();
   constructor( private contractService: ContractService,
                private customers: CustomerService,

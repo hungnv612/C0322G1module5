@@ -11,7 +11,7 @@ const API_URL = `${environment.apiUrl}`;
 })
 export class CategoryService {
 
-  constructor(private http: HttpClient) {
+    constructor(private http: HttpClient) {
   }
 
   getAll(): Observable<Category[]> {

@@ -11,7 +11,7 @@
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div>
-    <form [formGroup]="facilityForm" (ngSubmit)="submit()">
+    <form [formGroup]="facilityForm" >
       <div style=" display: flex;justify-content: center;" class="row">
         <div class="col-8">
           <div>
@@ -20,7 +20,7 @@
               <select class="form-control" formControlName="facilityTypeId"
                       (change)="changeFacility($event.target.value)">
                 <option value="" selected>Select</option>
-                <option *ngFor="let item of facilityTypes" [value]="item.name">{{item.name}}</option>
+                <option *ngFor="let item of facilityTypes" [value]="item.id">{{item.name}}</option>
               </select>
             </div>
             <span style="color: red"
@@ -116,7 +116,7 @@
                   *ngIf="facilityForm.controls.facalityImg.hasError('required') && facilityForm.controls.facalityImg.touched">=> Please input !</span>
             <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
             <div class="col-6">
-              <button style="margin-right: 5px" class="btn btn-outline-success" >
+              <button style="margin-right: 5px" class="btn btn-outline-success" (click)="submit()">
                 Create
               </button>
               <button routerLink="/facility" class="btn btn-outline-danger">Exit</button>

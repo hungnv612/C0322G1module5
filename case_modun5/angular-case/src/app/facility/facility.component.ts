@@ -21,21 +21,27 @@ export class FacilityComponent implements OnInit {
     this.displayModalDetail(1);
   }
 
-  getAll() {
-    this.facilities = this.facilityService.getAll();
+  getAll(): void {
+    this.facilityService.getAll().subscribe(facility => {
+      this.facilities = facility;
+    });
   }
 
   displayModalDetail(id: number): void {
-    this.faclityObjModal = this.facilityService.findById(id);
-    console.log(this.faclityObjModal);
+    this.facilityService.findById(id).subscribe(facility => {
+      this.faclityObjModal = facility;
+    });
   }
-  openDelete(id: number, name: string) {
+  openDelete(id: number, name: string): void {
     this.id = id;
     this.name = name;
   }
 
-  delete(id: number) {
-    this.facilityService.deleteFacility(id);
-    this.facilities = this.facilityService.getAll();
+  delete(id: number): void {
+    this.facilityService.deleteFacility(id).subscribe(() => {
+      this.getAll();
+    }, e => {
+      console.log(e);
+    });
   }
 }

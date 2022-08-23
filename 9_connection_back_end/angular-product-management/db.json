@@ -1,8 +1,8 @@
 {
   "category": [
     {
-      "id": 1,
-      "name": "hung"
+      "name": "hunghhhh",
+      "id": 1
     },
     {
       "id": 2,
@@ -19,10 +19,10 @@
   ],
   "product": [
     {
-      "id": 1,
       "name": "IPhone 11",
       "price": 2400000,
-      "description": "New"
+      "description": "Newww",
+      "id": 1
     },
     {
       "id": 2,

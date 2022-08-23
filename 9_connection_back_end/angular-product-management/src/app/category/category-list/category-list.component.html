@@ -21,11 +21,11 @@
         <td>{{category.name}}</td>
         <td>
           <a [routerLink]="['/category/edit', category.id]">
-            <button class="btn">Edit</button>
+            <button class="btn btn-outline-success">Edit</button>
           </a>
         </td>
         <td>
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openDelete(category.id,category.name)">
+          <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openDelete(category.id,category.name)">
             Delete
           </button>
         </td>

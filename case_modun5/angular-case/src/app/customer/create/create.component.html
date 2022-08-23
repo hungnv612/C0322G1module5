@@ -10,7 +10,7 @@
 <div class="body_center_2 container">
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
   <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-  <form [formGroup]="customerForm" (ngSubmit)="submit()">
+  <form [formGroup]="customerForm" >
     <div style=" display: flex;justify-content: center;" class="row">
       <div class="col-6">
         <div class="col-12">Name</div>
@@ -23,7 +23,7 @@
         <div class="col-12">
           <select class="form-select" formControlName="type">
             <option value="" selected>Select</option>
-            <option selected *ngFor="let item of customerType" [ngValue]="item">{{item.name}}</option>
+            <option selected *ngFor="let item of customerType" [ngValue]="item.id">{{item.name}}</option>
             <span style="color: red" *ngIf="customerForm.controls.type.hasError('required') && customerForm.controls.type.touched">=> Please input !</span>
           </select>
         </div>
@@ -64,7 +64,7 @@
           </div>
           <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
           <div class="col-12">
-            <button style="margin-right: 5px" class="btn btn-outline-success" [disabled]="customerForm.invalid">Create</button>
+            <button style="margin-right: 5px" class="btn btn-outline-success" (click)="submit()" [disabled]="customerForm.invalid" >Create</button>
             <button routerLink="/customer" class="btn btn-outline-danger">Exit</button>
           </div>
         </div>

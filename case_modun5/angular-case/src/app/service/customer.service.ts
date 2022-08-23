@@ -1,91 +1,37 @@
 import {Injectable} from '@angular/core';
 import {Customer} from '../model/customer';
+import {environment} from '../../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+
+const API_URL = `${environment.apiUrl}`;
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
-  idMax = 0;
-  customers: Customer[] = [
-    {
-      id: 1,
-      type: {id: 1, name: 'Silver'},
-      name: 'Hung',
-      dayOfBirth: '2001/12/12',
-      gender: 'Nam',
-      idCard: '123123123',
-      phone: '0905111234',
-      email: 'hung@gmail.com',
-      address: '592 núi thành',
-    },
-    {
-      id: 2,
-      type: {id: 2, name: 'Gold'},
-      name: 'si',
-      dayOfBirth: '2001/12/12',
-      gender: 'Nam',
-      idCard: '123123123',
-      phone: '0905111234',
-      email: 'si@gmail.com',
-      address: '592 si thành',
-    },
-    {
-      id: 3,
-      type: {id: 3, name: 'Diamond'},
-      name: 'lam',
-      dayOfBirth: '2001/12/12',
-      gender: 'Nam',
-      idCard: '123123123',
-      phone: '0905111234',
-      email: 'lam@gmail.com',
-      address: '592 lam thành',
-    },
-    {
-      id: 4,
-      type: {id: 4, name: 'Platinum'},
-      name: 'hai',
-      dayOfBirth: '2001/12/12',
-      gender: 'Nam',
-      idCard: '123123123',
-      phone: '0905111234',
-      email: 'hai@gmail.com',
-      address: '592 hai thành',
-    }
-  ];
-
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
-  getAll() {
-    return this.customers;
+  getAll(): Observable<Customer[]> {
+    return this.http.get<Customer[]>(API_URL + '/customer');
   }
 
   saveCustomer(customer: Customer) {
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.customers.length ; i++) {
-      if (this.customers[i].id > this.idMax) {
-        this.idMax = this.customers[i].id;
-      }
-    }
-    customer.id = this.idMax + 1;
-    this.customers.push(customer);
+    return this.http.post<Customer>(API_URL + '/customer', customer);
   }
 
-  deleteCustomer(id: number) {
-    this.customers = this.customers.filter(customer => {
-      return customer.id !== id;
-    });
+  findById(id: number): Observable<Customer> {
+    return this.http.get<Customer>(`${API_URL}/customer/${id}`);
   }
 
-  findByIdCustomer(id: number) {
-    return this.customers.find(category => category.id === id);
+  updateCustomer(id: number, customer: Customer): Observable<Customer> {
+    return this.http.put<Customer>(`${API_URL}/customer/${id}`, customer);
   }
 
-  editCustomer(id: number, customer: any) {
-    for (let i = 0; i < this.customers.length; i++) {
-      if (this.customers[i].id === id) {
-        this.customers[i] = customer;
-      }
-    }
+  deleteCustomer(id: number): Observable<Customer> {
+    return this.http.delete<Customer>(`${API_URL}/customer/${id}`);
   }
+
 }
+

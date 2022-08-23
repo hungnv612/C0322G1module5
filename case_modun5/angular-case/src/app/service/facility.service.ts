@@ -1,183 +1,36 @@
 import { Injectable } from '@angular/core';
 import {Facility} from '../model/facility';
+import {environment} from '../../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 import {Customer} from '../model/customer';
+
+const API_URL = `${environment.apiUrl}`;
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FacilityService {
-  idMax = 0;
-  facilities: Facility[] = [
-    {
-      id: 1,
-      facilityName: 'Villa Beach Front',
-      are: 25000,
-      cost: 20000000,
-      maxPeople: 2,
-      rentTypeId: 2,
-      facilityTypeId: {id: 1, name: 'Villa'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg'
-    },
-    {
-      id: 2,
-      facilityName: 'House Princess 01',
-      are: 30000,
-      cost: 12000000,
-      maxPeople: 4,
-      rentTypeId: 2,
-      facilityTypeId: {id: 2, name: 'House'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-M-1047x563.jpg'
-    },
-    {
-      id: 3,
-      facilityName: 'Room Twin 01',
-      are: 27000,
-      cost: 14000000,
-      maxPeople: 8,
-      rentTypeId: 2,
-      facilityTypeId: {id: 3, name: 'Room'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_-Lagoon-Superior-double-bed-1047x563.jpg'
-    },
-    {
-      id: 4,
-      facilityName: 'Villa Beach Front',
-      are: 25000,
-      cost: 22000000,
-      maxPeople: 7,
-      rentTypeId: 2,
-      facilityTypeId: {id: 1, name: 'Villa'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg'
-    },
-    {
-      id: 5,
-      facilityName: 'House Princess 01',
-      are: 30000,
-      cost: 32000000,
-      maxPeople: 5,
-      rentTypeId: 2,
-      facilityTypeId: {id: 3, name: 'Room'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-M-1047x563.jpg'
-    },
-    {
-      id: 6,
-      facilityName: 'Room Twin 01',
-      are: 27000,
-      cost: 42000000,
-      maxPeople: 13,
-      rentTypeId: 2,
-      facilityTypeId: {id: 1, name: 'Villa'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_-Lagoon-Superior-double-bed-1047x563.jpg'
-    },
-    {
-      id: 7,
-      facilityName: 'Villa Beach Front',
-      are: 25000,
-      cost: 12000000,
-      maxPeople: 2,
-      rentTypeId: 2,
-      facilityTypeId: {id: 3, name: 'Room'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg'
-    },
-    {
-      id: 8,
-      facilityName: 'House Princess 01',
-      are: 30000,
-      cost: 34000000,
-      maxPeople: 4,
-      rentTypeId: 2,
-      facilityTypeId: {id: 3, name: 'Room'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-M-1047x563.jpg'
-    },
-    {
-      id: 9,
-      facilityName: 'Room Twin 01',
-      are: 27000,
-      cost: 23000000,
-      maxPeople: 14,
-      rentTypeId: 2,
-      facilityTypeId: {id: 1, name: 'Villa'},
-      standardRoom: 'vip',
-      descriptionOtherConvenience: 'Có hồ bơi',
-      poolArea: 500,
-      numberOffloors: 4,
-      facalityFree: 'ko có',
-      facalityImg: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_-Lagoon-Superior-double-bed-1047x563.jpg'
-    }
-  ];
 
-  constructor() {}
-  getAll() {
-    return this.facilities;
+  constructor(private http: HttpClient) {}
+  getAll(): Observable<Facility[]> {
+    return this.http.get<Facility[]>(API_URL + '/facility');
   }
 
-  findById(id: number) {
-    return this.facilities.find(category => category.id === id);
-  }
   saveFacility(facility: Facility) {
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.facilities.length ; i++) {
-      if (this.facilities[i].id > this.idMax) {
-        this.idMax = this.facilities[i].id;
-      }
-    }
-    facility.id = this.idMax + 1;
-    this.facilities.push(facility);
-  }
-  deleteFacility(id: number) {
-    this.facilities = this.facilities.filter(facility => {
-      return facility.id !== id;
-    });
+    return this.http.post<Facility>(API_URL + '/facility', facility);
   }
 
-  findByIdFacility(id: number) {
-    return this.facilities.find(category => category.id === id);
+  findById(id: number): Observable<Facility> {
+    return this.http.get<Facility>(`${API_URL}/facility/${id}`);
   }
 
-  editFacility(id: number, facility: any) {
-    for (let i = 0; i < this.facilities.length; i++) {
-      if (this.facilities[i].id === id) {
-        this.facilities[i] = facility;
-      }
-    }
+  updateFacility(id: number, facility: Facility): Observable<Facility> {
+    return this.http.put<Facility>(`${API_URL}/facility/${id}`, facility);
+  }
+
+  deleteFacility(id: number): Observable<Facility> {
+    return this.http.delete<Facility>(`${API_URL}/facility/${id}`);
   }
 }

@@ -6,7 +6,8 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HomeComponent} from './home/home.component';
+import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -16,10 +17,12 @@ import {HomeComponent} from './home/home.component';
     FooterComponent
   ],
     imports: [
+        NgxPaginationModule,
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
         FormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

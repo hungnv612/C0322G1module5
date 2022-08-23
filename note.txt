@@ -9,3 +9,11 @@ npm i -s bootstrap
 ng g i name
 
 ng g s name
+
+phan trang
+npm i ngx-pagination@5.1.1
+
+npm install ngx-pagination --save
+
+//
+NgxPaginationModule

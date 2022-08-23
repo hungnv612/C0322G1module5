@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {FacilityType} from '../../model/facility-type';
 import {FacilityTypeService} from '../../service/facility-type.service';
@@ -11,10 +11,9 @@ import {FacilityService} from '../../service/facility.service';
   styleUrls: ['./facility-edit.component.css']
 })
 export class FacilityEditComponent implements OnInit {
-
   facilityForm: FormGroup;
   id: number;
-  facilityTypes: FacilityType[] = this.type.getAll();
+  facilityTypes: FacilityType[] = [];
 
   constructor(private facilityService: FacilityService,
               private type: FacilityTypeService,
@@ -22,7 +21,30 @@ export class FacilityEditComponent implements OnInit {
               private router: Router) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
-      const facility = this.getFacility(this.id);
+      this.getFacility(this.id);
+    });
+  }
+
+  ngOnInit(): void {
+    this.getFacilityTypes();
+  }
+
+  editFacility(id: number) {
+    const facility = this.facilityForm.value;
+    this.type.findById(facility.facilityTypeId).subscribe(facilityType => {
+      facility.facilityTypeId = {
+        id: facilityType.id,
+        name: facilityType.name
+      };
+      this.facilityService.updateFacility(id, facility).subscribe(() => {
+        this.router.navigate(['/facility']);
+      }, error => {
+        console.log(error);
+      });
+    });
+  }
+  getFacility(id: number) {
+    return this.facilityService.findById(id).subscribe(facility => {
       this.facilityForm = new FormGroup({
         id: new FormControl(facility.id),
         facilityName: new FormControl(facility.facilityName),
@@ -30,7 +52,7 @@ export class FacilityEditComponent implements OnInit {
         cost: new FormControl(facility.cost),
         maxPeople: new FormControl(facility.maxPeople),
         rentTypeId: new FormControl(facility.rentTypeId),
-        facilityTypeId: new FormControl(facility.facilityTypeId),
+        facilityTypeId: new FormControl(facility.facilityTypeId.id),
         standardRoom: new FormControl(facility.standardRoom),
         descriptionOtherConvenience: new FormControl(facility.descriptionOtherConvenience),
         poolArea: new FormControl(facility.poolArea),
@@ -41,17 +63,10 @@ export class FacilityEditComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  editFacility(id: number) {
-    const facility = this.facilityForm.value;
-    this.facilityService.editFacility(id, facility);
-    this.router.navigate(['facility']);
-  }
-
-  getFacility(id: number) {
-    return this.facilityService.findByIdFacility(id);
+  getFacilityTypes(): void {
+    this.type.getAll().subscribe(facilityTypes => {
+      this.facilityTypes = facilityTypes;
+    });
   }
 
 }

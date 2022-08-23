@@ -11,7 +11,7 @@ import {CustomerTypeService} from '../../service/customer-type.service';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-  customerType: CustomerType[] = this.type.getAll();
+  customerType: CustomerType[] = [];
   customerForm: FormGroup = new FormGroup({
     type: new FormControl('', [Validators.required]),
     name: new FormControl('', [Validators.required, Validators.pattern('^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$')]),
@@ -29,14 +29,29 @@ export class CreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getCustomerType();
   }
 
   submit() {
     const customer = this.customerForm.value;
-    console.log(customer);
-    this.customerService.saveCustomer(customer);
-    this.customerForm.reset();
-    this.router.navigate(['/customer']);
+    this.type.findById(customer.type).subscribe(customerType => {
+      customer.type = {
+        id: customerType.id,
+        name: customerType.name
+      };
+      this.customerService.saveCustomer(customer).subscribe(() => {
+        this.customerForm.reset();
+        this.router.navigate(['/customer']);
+      }, error => {
+        console.log(error);
+      });
+    });
+  }
+
+  getCustomerType(): void {
+    this.type.getAll().subscribe(customerType => {
+      this.customerType = customerType;
+    });
   }
 
 }

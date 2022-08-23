@@ -13,7 +13,7 @@ import {CustomerType} from '../../model/customer-type';
 export class EditComponent implements OnInit {
   customerForm: FormGroup;
   id: number;
-  customerType: CustomerType[] = this.type.getAll();
+  customerType: CustomerType[] = [];
 
   constructor(private customerService: CustomerService,
               private type: CustomerTypeService,
@@ -21,10 +21,34 @@ export class EditComponent implements OnInit {
               private router: Router) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
-      const customer = this.getCustomer(this.id);
+      this.getCustomer(this.id);
+    });
+  }
+
+  ngOnInit(): void {
+    this.getCustomerType();
+  }
+
+  editCustomer(id: number) {
+    const customer = this.customerForm.value;
+    this.type.findById(customer.type).subscribe(customerType => {
+      customer.type = {
+        id: customerType.id,
+        name: customerType.name
+      };
+      this.customerService.updateCustomer(id, customer).subscribe(() => {
+        this.router.navigate(['/customer']);
+      }, error => {
+        console.log(error);
+      });
+    });
+  }
+
+  getCustomer(id: number) {
+    return this.customerService.findById(id).subscribe(customer => {
       this.customerForm = new FormGroup({
         id: new FormControl(customer.id),
-        type: new FormControl(customer.type.name, [Validators.required]),
+        type: new FormControl(customer.type.id, [Validators.required]),
         name: new FormControl(customer.name, [Validators.required]),
         dayOfBirth: new FormControl(customer.dayOfBirth, [Validators.required]),
         gender: new FormControl(customer.gender, [Validators.required]),
@@ -36,16 +60,9 @@ export class EditComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  editCustomer(id: number) {
-    const customer = this.customerForm.value;
-    this.customerService.editCustomer(id, customer);
-    this.router.navigate(['customer']);
-  }
-
-  getCustomer(id: number) {
-    return this.customerService.findByIdCustomer(id);
+  getCustomerType(): void {
+    this.type.getAll().subscribe(customerType => {
+      this.customerType = customerType;
+    });
   }
 }
