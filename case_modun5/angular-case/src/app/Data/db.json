@@ -142,8 +142,8 @@
       "maxPeople": 4,
       "rentTypeId": 2,
       "facilityTypeId": {
-        "id": 2,
-        "name": "House"
+        "id": 3,
+        "name": "Room"
       },
       "standardRoom": "vip",
       "descriptionOtherConvenience": "Có hồ bơi",
