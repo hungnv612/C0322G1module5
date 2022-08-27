@@ -17,3 +17,5 @@ npm install ngx-pagination --save
 
 //
 NgxPaginationModule
+
+json-server --watch db.json

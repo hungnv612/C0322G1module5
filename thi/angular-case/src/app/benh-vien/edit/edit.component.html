@@ -1,0 +1,74 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height: 250px" src="assets/img/Screenshot%202022-08-11CUSTOMER.jpg" class="d-block w-100"
+           alt="...">
+    </div>
+
+  </div>
+</div>
+<div class="body_center_2 container">
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+
+  <form *ngIf="benhVienForm" [formGroup]="benhVienForm" (ngSubmit)="edit(id)">
+    <div style=" display: flex;justify-content: center;" class="row">
+      <div class="col-6">
+        <div class="col-12">
+          <input disabled type="text" class="form-control" formControlName="id">
+        </div>
+        <ng-container formGroupName="benhNhan">
+          <div class="col-12">Ma Benh Nhan</div>
+          <div class="col-12">
+            <input disabled type="text" class="form-control" formControlName="id">
+          </div>
+          <div class="col-12">Ten Benh Nhan</div>
+          <div class="col-12">
+            <input  type="text" class="form-control" formControlName="tenBenhNhan">
+          </div>
+        </ng-container>
+        <div class="col-12">Ngay Vào Vien</div>
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="ngayNhapVien">
+        </div>
+        <span style="color: red"
+              *ngIf="benhVienForm.controls.ngayNhapVien.hasError('required') && benhVienForm.controls.ngayNhapVien.touched">=> Please input !</span>
+        <div class="col-12">Ngay Ra Vien</div>
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="ngayRaVien">
+        </div>
+        <span style="color: red"
+              *ngIf="benhVienForm.controls.ngayRaVien.hasError('required') && benhVienForm.controls.ngayRaVien.touched">=> Please input !</span>
+
+        <div class="col-12">Ly Do</div>
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="lyDo">
+        </div>
+        <span style="color: red"
+              *ngIf="benhVienForm.controls.lyDo.hasError('required') && benhVienForm.controls.lyDo.touched">=> Please input !</span>
+
+        <div class="col-12">Phuong Phap</div>
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="phuongPhap">
+        </div>
+        <span style="color: red"
+              *ngIf="benhVienForm.controls.phuongPhap.hasError('required') && benhVienForm.controls.phuongPhap.touched">=> Please input !</span>
+        <div class="col-12">Bac Si</div>
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="bacSi">
+        </div>
+        <span style="color: red"
+              *ngIf="benhVienForm.controls.bacSi.hasError('required') && benhVienForm.controls.bacSi.touched">=> Please input !</span>
+        <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+        <div class="col-12">
+          <button type="submit" style="margin-right: 5px" class="btn btn-outline-success">Edit</button>
+          <button routerLink="/benhVien" class="btn btn-outline-danger">Exit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+</div>

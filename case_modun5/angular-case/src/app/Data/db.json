@@ -27,20 +27,6 @@
       "phone": "0905111234",
       "email": "si@gmail.com",
       "address": "592 si thành"
-    },
-    {
-      "id": 3,
-      "type": {
-        "id": 3,
-        "name": "Diamond"
-      },
-      "name": "lam",
-      "dayOfBirth": "2001/12/12",
-      "gender": "Nam",
-      "idCard": "123123123",
-      "phone": "0905111234",
-      "email": "lam@gmail.com",
-      "address": "592 lam thành"
     }
   ],
   "customerType": [

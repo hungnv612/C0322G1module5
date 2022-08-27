@@ -1,24 +1,18 @@
 import {NgModule} from '@angular/core';
 
 import {RouterModule, Routes} from '@angular/router';
+import {BenhVienComponent} from './benh-vien/benh-vien.component';
+import {EditComponent} from './benh-vien/edit/edit.component';
+import {CreateComponent} from './benh-vien/create/create.component';
 
 
 const routes: Routes = [
-  {
-    path: 'customer',
-    loadChildren: () => import('./customer/customer.module').then(module => module.CustomerModule)
-  },
+  {path: 'benhVien', component: BenhVienComponent},
+  {path: 'benhVien/edit/:id', component: EditComponent},
+  {path: 'benhVien/create' , component: CreateComponent},
   {
     path: '',
     loadChildren: () => import('./home/home.module').then(module => module.HomeModule)
-  },
-  {
-    path: 'facility',
-    loadChildren: () => import('./facility/facility.module').then(module => module.FacilityModule)
-  },
-  {
-    path: 'contract',
-    loadChildren: () => import('./contract/contract.module').then(module => module.ContractModule)
   }
 ];
 

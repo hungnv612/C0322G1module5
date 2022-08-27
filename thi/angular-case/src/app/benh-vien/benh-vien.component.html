@@ -1,0 +1,69 @@
+<div class="body_center_2 container">
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+  <div style="text-align: center">
+    <a routerLink="/benhVien/create"><button class="btn btn-outline-success" type="button">CREATE</button></a>
+  </div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner" ></span></div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+  <table class="table table-light">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Mã Bệnh Án</th>
+      <th>Mã Bệnh Nhân</th>
+      <th>Tên Bệnh Nhân</th>
+      <th>Ngày Nhập Viện</th>
+      <th>Ngày Ra Viện</th>
+      <th>Lý Do Nhập Viện</th>
+      <th>Phương Pháp Diều Trị</th>
+      <th>Bác sĩ</th>
+      <th>Edit</th>
+      <th >Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of benhAns;index as i ">
+      <td>{{i+1}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.benhNhan.id}}</td>
+      <td>{{item.benhNhan.tenBenhNhan}}</td>
+      <td>{{item.ngayNhapVien}}</td>
+      <td>{{item.ngayRaVien}}</td>
+      <td>{{item.lyDo}}</td>
+      <td>{{item.phuongPhap}}</td>
+      <td>{{item.bacSi}}</td>
+      <td>
+        <a [routerLink]="['/benhVien/edit',item.id]" class="btn btn-outline-success">
+          Edit
+        </a>
+      </td>
+      <td>
+        <button (click)="openDelete(item.id,item.benhNhan.tenBenhNhan)" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+  <div class="modal fade" id="exampleModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-top: 110px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">DELETE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          bạn có muốn xóa <span style="color: red">{{name}}</span>
+        </div>
+        <div class="modal-footer">
+          <button  type="button" class="btn btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn btn-outline-danger" data-bs-dismiss="modal" (click)="delete(id)" >Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+</div>

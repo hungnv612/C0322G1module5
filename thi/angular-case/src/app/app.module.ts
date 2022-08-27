@@ -9,13 +9,19 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {ToastrModule} from 'ngx-toastr';
+import { BenhVienComponent } from './benh-vien/benh-vien.component';
+import { EditComponent } from './benh-vien/edit/edit.component';
+import { CreateComponent } from './benh-vien/create/create.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BenhVienComponent,
+    EditComponent,
+    CreateComponent
   ],
     imports: [
         NgxPaginationModule,

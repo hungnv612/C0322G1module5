@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0030292c-2465-48a9-adba-abf5bb327c39" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../case" beforeDir="false" afterPath="$PROJECT_DIR$/../case" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/Data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../thi/angular-case/src/app/Data/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../thi/angular-case/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../thi/angular-case/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-create/contract-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-create/contract-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-create/contract-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-create/contract-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-edit/contract-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-edit/contract-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-edit/contract-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-edit/contract-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/contract/contract.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/customer/customer-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../thi/angular-case/src/app/customer/customer-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thi/angular-case/src/app/customer/customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../thi/angular-case/src/app/customer/customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-create/facility-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-create/facility-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-create/facility-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-create/facility-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-edit/facility-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-edit/facility-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-edit/facility-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-edit/facility-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/facility/facility.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/model/contract.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/model/facility-type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/model/facility.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/service/contract.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/service/facility-type.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thi/angular-case/src/app/service/facility.service.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2DsHzHM1hNrQMYYR8gv3hELWAWe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0030292c-2465-48a9-adba-abf5bb327c39" name="Default Changelist" comment="" />
+      <created>1661481132356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661481132356</updated>
+      <workItem from="1661481134099" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
