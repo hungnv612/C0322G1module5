@@ -16,7 +16,7 @@ export class BenhANService {
   }
 
   getAll(): Observable<BenhAn[]> {
-    return this.http.get<BenhAn[]>(API_URL + '/BenhAn');
+    return this.http.get<BenhAn[]>(API_URL );
   }
 
   saveBenhAn(benhAn: BenhAn) {
